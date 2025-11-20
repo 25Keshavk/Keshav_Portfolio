@@ -1,0 +1,44 @@
+---
+import Section from "./Section.astro";
+
+interface Props {
+  chess: {
+    description: string;
+    profileLink: string;
+    images: string[];
+  };
+}
+
+const { chess } = Astro.props;
+---
+
+<Section text="Chess" href="chess">
+  <div class="mb-8">
+    <p class="mb-6 text-base text-neutral">
+      {chess.description}
+    </p>
+    <div class="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+      {
+        chess.images.map((image, index) => (
+          <div class="overflow-hidden rounded-xl border border-neutral/20">
+            <img
+              class="h-64 w-full object-cover md:h-96"
+              src={image}
+              alt={`Chess photo ${index + 1}`}
+            />
+          </div>
+        ))
+      }
+    </div>
+    
+    <a
+      href={chess.profileLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-block rounded-full bg-primary px-6 py-3 text-sm leading-5 font-medium text-white transition-opacity hover:opacity-90"
+    >
+      View my chess.com profile
+    </a>
+  </div>
+</Section>
+

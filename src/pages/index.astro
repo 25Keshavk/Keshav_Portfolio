@@ -4,14 +4,92 @@ import Hero from "@components/Hero.astro";
 import Layout from "@layouts/Layout.astro";
 import Experience from "@components/Experience.astro";
 import Projects from "@components/Projects.astro";
+import ThinkCosmos from "@components/ThinkCosmos.astro";
 import About from "@components/About.astro";
+import RockClimbing from "@components/RockClimbing.astro";
+import Chess from "@components/Chess.astro";
+import Photography from "@components/Photography.astro";
 
 import "../styles/global.css";
 ---
 
 <Layout>
   <Hero {...SITE_CONTENT.hero} />
-  <Experience experience={SITE_CONTENT.experience} />
-  <Projects projects={SITE_CONTENT.projects} />
-  <About {...SITE_CONTENT.about} name={SITE_CONTENT.hero.name} />
+  
+  <div class="tab-content-wrapper">
+    <div id="experience-tab" class="tab-content active">
+      <Experience experience={SITE_CONTENT.experience} />
+    </div>
+    
+    <div id="projects-tab" class="tab-content">
+      <Projects projects={SITE_CONTENT.projects} />
+    </div>
+    
+    <div id="think-cosmos-tab" class="tab-content">
+      <ThinkCosmos thinkCosmos={SITE_CONTENT.thinkCosmos} />
+    </div>
+    
+    <div id="about-tab" class="tab-content">
+      <About {...SITE_CONTENT.about} name={SITE_CONTENT.hero.name} />
+    </div>
+    
+    <div id="rock-climbing-tab" class="tab-content">
+      <RockClimbing rockClimbing={SITE_CONTENT.activities.rockClimbing} />
+    </div>
+    
+    <div id="chess-tab" class="tab-content">
+      <Chess chess={SITE_CONTENT.activities.chess} />
+    </div>
+    
+    <div id="photography-tab" class="tab-content">
+      <Photography photography={SITE_CONTENT.activities.photography} />
+    </div>
+  </div>
 </Layout>
+
+<script>
+  // Tab switching logic
+  const navItems = document.querySelectorAll("#main-menu .nav-item");
+  const tabContents = document.querySelectorAll(".tab-content");
+
+  navItems.forEach((navItem) => {
+    navItem.addEventListener("click", (e) => {
+      e.preventDefault();
+      const href = navItem.getAttribute("href");
+      
+      if (!href || href === "/" || href === "#") return;
+      
+      const tabId = href.replace("#", "") + "-tab";
+      
+      // Hide all tabs
+      tabContents.forEach((tab) => tab.classList.remove("active"));
+      
+      // Remove active state from all nav items
+      navItems.forEach((item) => {
+        item.classList.remove("text-white", "md:after:opacity-100");
+      });
+      
+      // Show selected tab
+      const selectedTab = document.getElementById(tabId);
+      if (selectedTab) {
+        selectedTab.classList.add("active");
+        navItem.classList.add("text-white", "md:after:opacity-100");
+      }
+    });
+  });
+  
+  // Set initial active state on first nav item
+  if (navItems.length > 0) {
+    navItems[0].classList.add("text-white", "md:after:opacity-100");
+  }
+</script>
+
+<style>
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+</style>

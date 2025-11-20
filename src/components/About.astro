@@ -1,26 +1,30 @@
 ---
 import Section from "./Section.astro";
-import { Image } from "astro:assets";
 import type { AboutProps, HeroProps } from "@types";
 
 type Props = AboutProps & Pick<HeroProps, "name">;
 
-const { description, image, name } = Astro.props;
+const { description, images, name } = Astro.props;
 ---
 
 <Section text="About Me" href="about">
-  <div class="flex flex-col items-center gap-12 md:flex-row md:gap-8">
-    <p class="w-auto text-base text-neutral md:pr-5">{description}</p>
-    <div
-      class="h-80 w-64 flex-shrink-0 rotate-[5deg] bg-white p-4 md:rotate-[7deg]"
-    >
-      <Image
-        class="object-cover"
-        src={image}
-        width="260"
-        height="260"
-        alt={name}
-      />
+  <div class="flex flex-col gap-10">
+    <p class="w-full text-base leading-relaxed text-neutral whitespace-pre-line">
+      {description}
+    </p>
+    
+    <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+      {
+        images.map((image, index) => (
+          <div class="aspect-square overflow-hidden rounded-xl border border-neutral/20 shadow-sm md:aspect-[4/5]">
+            <img
+              class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+              src={image}
+              alt={`${name} - Photo ${index + 1}`}
+            />
+          </div>
+        ))
+      }
     </div>
   </div>
 </Section>

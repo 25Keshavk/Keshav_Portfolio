@@ -1,0 +1,157 @@
+---
+import Section from "./Section.astro";
+import { Image } from "astro:assets";
+import type { ActivitiesContent } from "@types";
+
+interface Props {
+  activities: ActivitiesContent;
+}
+
+const { activities } = Astro.props;
+const { rockClimbing, chess, photography } = activities;
+---
+
+<Section text="Outside Activities" href="activities">
+  <div class="space-y-8">
+    <!-- Tabs -->
+    <div class="inline-flex rounded-full border border-neutral/40 bg-black/60 p-1 text-sm text-neutral">
+      <button
+        type="button"
+        class="activities-tab-btn rounded-full px-4 py-2 font-medium data-[active=true]:bg-primary data-[active=true]:text-white"
+        data-tab="rock-climbing"
+      >
+        Rock Climbing
+      </button>
+      <button
+        type="button"
+        class="activities-tab-btn rounded-full px-4 py-2 font-medium data-[active=true]:bg-primary data-[active=true]:text-white"
+        data-tab="chess"
+      >
+        Chess
+      </button>
+      <button
+        type="button"
+        class="activities-tab-btn rounded-full px-4 py-2 font-medium data-[active=true]:bg-primary data-[active=true]:text-white"
+        data-tab="photography"
+      >
+        Photography
+      </button>
+    </div>
+
+    <!-- Panels -->
+    <div class="mt-4">
+      <!-- Rock Climbing -->
+      <div
+        class="activities-tab-panel grid gap-6 md:grid-cols-[2fr,1fr] md:items-center"
+        data-tab-panel="rock-climbing"
+      >
+        <div>
+          <h3 class="mb-2 font-serif text-2xl font-semibold text-white">
+            Rock Climbing
+          </h3>
+          <p class="text-base text-neutral">
+            {rockClimbing.description}
+          </p>
+        </div>
+        <div class="flex justify-center">
+          <div class="h-48 w-40 rotate-3 overflow-hidden rounded-xl border border-neutral/30 bg-white/5 p-2">
+            <Image
+              class="h-full w-full rounded-lg object-cover"
+              src={rockClimbing.image}
+              width="320"
+              height="380"
+              alt="Rock climbing"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Chess -->
+      <div
+        class="activities-tab-panel hidden"
+        data-tab-panel="chess"
+      >
+        <h3 class="mb-2 font-serif text-2xl font-semibold text-white">
+          Chess
+        </h3>
+        <p class="mb-3 text-base text-neutral">
+          {chess.description}
+        </p>
+        <a
+          href={chess.profileLink}
+          target="_blank"
+          class="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+        >
+          View my chess.com profile
+          <span class="after:relative after:bottom-[-4px] after:content-[url(/external.svg)]" />
+        </a>
+      </div>
+
+      <!-- Photography -->
+      <div
+        class="activities-tab-panel hidden"
+        data-tab-panel="photography"
+      >
+        <h3 class="mb-2 font-serif text-2xl font-semibold text-white">
+          Photography
+        </h3>
+        <p class="mb-4 text-base text-neutral">
+          {photography.description}
+        </p>
+        <div class="grid grid-cols-2 gap-3 sm:grid-cols-3">
+          {
+            photography.images.map((photo) => (
+              <div class="overflow-hidden rounded-xl border border-neutral/30 bg-white/5">
+                <Image
+                  class="h-32 w-full object-cover sm:h-36"
+                  src={photo.src}
+                  width="320"
+                  height="240"
+                  alt={photo.alt}
+                />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</Section>
+
+<script>
+  const tabButtons = document.querySelectorAll<HTMLButtonElement>(
+    ".activities-tab-btn",
+  );
+  const tabPanels = document.querySelectorAll<HTMLDivElement>(
+    ".activities-tab-panel",
+  );
+
+  const activateTab = (tabName: string) => {
+    tabButtons.forEach((btn) => {
+      const isActive = btn.dataset.tab === tabName;
+      btn.dataset.active = isActive ? "true" : "false";
+    });
+
+    tabPanels.forEach((panel) => {
+      if (panel.dataset.tabPanel === tabName) {
+        panel.classList.remove("hidden");
+      } else {
+        panel.classList.add("hidden");
+      }
+    });
+  };
+
+  // Set initial tab
+  activateTab("rock-climbing");
+
+  tabButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const tab = btn.dataset.tab;
+      if (tab) {
+        activateTab(tab);
+      }
+    });
+  });
+</script>
+
+

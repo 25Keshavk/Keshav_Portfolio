@@ -12,29 +12,23 @@ const { experience } = Astro.props;
 <Section text="Work Experience" href="experience">
   {
     experience.map(({ company, position, startDate, endDate, summary }) => (
-      <div class="mb-10">
-        <h3 class="mb-1.5 font-serif text-2xl font-semibold text-white">
-          {company}
-        </h3>
-        <div class="flex flex-col items-start pb-5">
-          <h4 class="mb-0.5 font-serif text-2xl font-medium text-primary">
-            {position}
-          </h4>
-          <span class="pb-[2px] text-sm text-white/70">
-            {startDate} — {endDate}
+      <div class="mb-8 border-b border-neutral/20 pb-8 last:border-0 last:pb-0">
+        <div class="mb-2 flex flex-col justify-between sm:flex-row sm:items-baseline">
+          <h3 class="font-serif text-2xl font-semibold text-white">
+            {company}
+          </h3>
+          <span class="text-sm text-white/70">
+            {startDate === endDate ? startDate : `${startDate} — ${endDate}`}
           </span>
         </div>
-        {Array.isArray(summary) ? (
-          <ul class="list-none">
-            {summary.map((log) => (
-              <li class="relative mb-3 pl-8 text-base text-neutral before:absolute before:top-1 before:left-0 before:content-[url(/check.svg)]">
-                {log}
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p class="text-base text-neutral">{summary}</p>
-        )}
+        
+        <h4 class="mb-3 font-serif text-lg font-medium text-primary">
+          {position}
+        </h4>
+        
+        <p class="text-base italic text-neutral/90">
+          {Array.isArray(summary) ? summary[0] : summary}
+        </p>
       </div>
     ))
   }

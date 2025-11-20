@@ -1,97 +1,183 @@
 import type { SiteConfig, SiteContent } from "../types";
 
 export const SITE_CONFIG: SiteConfig = {
-  title: "Alejandro Múnez — Mobile & Web Developer",
-  author: "Alejandro Múnez Cuntez",
+  title: "Keshav Kotamraju — Computer Science & Math",
+  author: "Keshav Kotamraju",
   description:
-    "Software Engineer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
+    "Computer Science and Mathematics student at the University of Pennsylvania (Class of 2029) with research experience in computational astrophysics, space science machine learning, and computational neuroscience.",
   lang: "en",
   siteLogo: "/alejandro-small.jpg",
   navLinks: [
     { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
+    { text: "Think Cosmos", href: "#think-cosmos" },
     { text: "About", href: "#about" },
+    { text: "Rock Climbing", href: "#rock-climbing" },
+    { text: "Chess", href: "#chess" },
+    { text: "Photography", href: "#photography" },
   ],
   socialLinks: [
-    { text: "Twitter", href: "https://github.com/immois/astro-zen" },
-    { text: "LinkedIn", href: "https://github.com/immois/astro-zen" },
-    { text: "Github", href: "https://github.com/immois/astro-zen" },
-    { text: "Youtube", href: "https://github.com/immois/astro-zen" },
-    { text: "Dribbble", href: "https://github.com/immois/astro-zen" },
+    {
+      text: "LinkedIn",
+      href: "https://www.linkedin.com/in/keshav-kotamraju-1b38ab292/",
+    },
+    { text: "Github", href: "https://github.com/25Keshavk" },
+    {
+      text: "MemoryVault (Devpost)",
+      href: "https://devpost.com/software/memoryvault",
+    },
   ],
   socialImage: "/zen-og.png",
-  canonicalURL: "https://astro-zen.vercel.app",
+  canonicalURL: "https://example.com",
 };
 
 export const SITE_CONTENT: SiteContent = {
   hero: {
-    name: "Alejandro Múnez",
-    specialty: "Mobile & Web Developer",
+    name: "Keshav Kotamraju",
+    specialty: "Computer Science & Mathematics @ University of Pennsylvania",
     summary:
-      "Developer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
-    email: "example@email.com",
+      "Computer Science and Mathematics student at the University of Pennsylvania (Class of 2029) with research experience in computational astrophysics, machine learning for space science, and computational neuroscience.",
+    email: "kkotamraju7@gmail.com",
   },
   experience: [
     {
-      company: "Zalmart",
-      position: "Lead Android Developer",
-      startDate: "May 2018",
-      endDate: "Sept 2020",
-      summary: [
-        "Implemented advanced memory management and code optimization techniques, resulting in a reduction in application load time by 40% and a decrease in crashes by 25%. This significantly improved user experience and increased user retention by 20%.",
-        "I led a team of developers in building and integrating new features using Jetpack Android components such as LiveData and ViewModel. This enabled us to build scalable and maintainable applications, reducing the crash rate by 20% and speeding up the time to delivery of new features by 15%.",
-        "Integrated Google Pay for in-app purchases, resulting in a 35% increase in mobile transaction revenue. Additionally, implemented Firebase Analytics to gain insights into user behavior, enabling data-driven optimizations and a 30% increase in user retention.",
-      ],
+      company: "UC Berkeley Space Sciences Laboratory",
+      position: "Machine Learning Research Intern",
+      startDate: "June 2024",
+      endDate: "August 2024",
+      summary: "Developed novel CNNs for gamma-ray detection on NASA's COSI telescope.",
     },
     {
-      company: "Bankit",
-      position: "Mobile Developer",
-      startDate: "Feb 2017",
-      endDate: "May 2018",
-      summary: [
-        "I designed and developed a mobile application using Flutter, allowing it to be deployed on both Android and iOS with a single codebase. This reduced development time by 50% and maintenance costs by 30%, facilitating a consistent user experience on both platforms.",
-        "I integrated biometric authentication and data encryption, significantly improving the security of user data. This implementation resulted in a 40% increase in user trust and a 25% reduction in unauthorized access attempts.",
-      ],
+      company: "Stanford Schnitzer Laboratory",
+      position: "Computational Neuroscience Research Intern",
+      startDate: "June 2022",
+      endDate: "June 2024",
+      summary: "Analyzed magnetic field effects on neurons and built lab infrastructure.",
     },
     {
-      company: "Driveer",
-      position: "Frontend Developer",
-      startDate: "Jun 2015",
-      endDate: "Oct 2016",
-      summary:
-        "Developed and integrated a real-time vehicle tracking system using WebSockets, improving accuracy and data update in the application. This functionality increased user satisfaction by 30% and reduced customer service inquiries by 25%.",
+      company: "UC Santa Cruz",
+      position: "Computational Astrophysics Research Intern",
+      startDate: "June 2022",
+      endDate: "August 2022",
+      summary: " improved hydrogen cloud identification by 58% using object detection models.",
+    },
+    {
+      company: "Think Cosmos",
+      position: "Founder",
+      startDate: "January 2022",
+      endDate: "July 2025",
+      summary: "Founded a non-profit for K–12 astronomy education, raising $17k+.",
+    },
+    {
+      company: "Astronomy & Earth Apps",
+      position: "Co-Founder & Developer",
+      startDate: "January 2022",
+      endDate: "July 2025",
+      summary: "Created apps for astronomy education and sunset prediction (1,100+ users).",
+    },
+    {
+      company: "USPTO",
+      position: "Provisional Patent Holder",
+      startDate: "2024",
+      endDate: "2024",
+      summary: "Filed patent for detecting attack vectors in digital channels.",
+    },
+    {
+      company: "Rocket Hackathon",
+      position: "1st Place — Memory Vault",
+      startDate: "2024",
+      endDate: "2024",
+      summary: "Built an Alzheimer's memory aid app using LLM-RAG and vector mapping.",
+    },
+    {
+      company: "Honors & Awards",
+      position: "Selected Achievements",
+      startDate: "May 2021",
+      endDate: "Present",
+      summary: "National Chess Champion & National Merit Finalist.",
     },
   ],
   projects: [
     {
-      name: "Spotifu Music",
-      summary: "A music streaming app that emulates Spotify's core features.",
-      linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
-      image: "/spotifu.png",
+      name: "Memory Vault",
+      summary:
+        "A web application for Alzheimer's patients built for Rocket Hackathon 2024, using a custom LLM-RAG system and vector mapping to let users store and relive their memories with guided prompts and generative drawings.",
+      linkPreview: "https://devpost.com/software/memoryvault",
+      linkSource: "https://github.com/25Keshavk/MemoryVault",
+      images: [
+        "/memory-vault-1.jpg",
+        "/memory-vault-2.jpg",
+        "/memory-vault-3.jpg",
+        "/memory-vault-4.jpg",
+      ],
     },
     {
-      name: "Shopp App",
-      summary: "An e-commerce platform that replicates Shopify's key features.",
-      linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
-      image: "/shopify-clon.png",
-    },
-    {
-      name: "ClonTagram",
-      summary: "A social network that replicates the features of Instagram",
-      linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
-      image: "/clone-ig.png",
+      name: "Ember AI",
+      summary:
+        "An iOS app that predicts vivid sunsets up to nine days ahead using machine learning and weather data. Reached 1,100+ active users across 35+ countries, helping tourists and photographers plan their perfect sunset shots.",
+      images: [
+        "/ember-ai-1.jpg",
+      ],
     },
   ],
+  thinkCosmos: {
+    description:
+      "I founded Think Cosmos in January 2022 with the goal of promoting astronomy among K–12 students. Over three years, the organization raised over $17,000, provided 40 telescopes to schools across 13 US states, developed comprehensive educational materials, and built a thriving astronomy community. In my senior year of High School, I rallied the 26 chapters of Think Cosmos in states like North Carolina, Texas, and Washington DC. Together, we sponsored astronomy organizations and funded museum trips for underprivileged children to inspire the next generation of scientists and explorers.",
+    images: [
+      "/think-cosmos-1.jpg",
+      "/think-cosmos-2.jpg",
+      "/think-cosmos-3.jpg",
+      "/think-cosmos-4.jpg",
+    ],
+  },
   about: {
     description: `
-      Hi, I’m Alejandro Múnez, a passionate Mobile and Web Developer with a knack for crafting seamless digital experiences. With a strong background in both Android and iOS development, as well as front-end web technologies, I thrive in the intersection where creativity meets technology.
-
-      Over the years, I’ve honed my skills in building robust, user-friendly applications that not only meet the needs of users but also push the boundaries of what’s possible. My projects range from innovative mobile applications to responsive web designs, all with a focus on performance, security, and scalability.
+      I am a Computer Science and Mathematics student at the University of Pennsylvania (Class of 2029), interested in software engineering, machine learning, computational astrophysics, and neuroscience. I grew up in the Bay Area and spend my free time playing in chess tournaments, practicing my photography, and bouldering. My academic background spans statistics and probability, linear algebra, multivariate calculus, discrete mathematics, programming languages, and the mathematical foundations of computer science.
     `,
-    image: "/alejandro-big.jpg",
+    images: [
+      "/about-1.jpg",
+      "/about-2.jpg",
+      "/about-3.jpg",
+      "/about-4.jpg",
+    ],
+  },
+  activities: {
+    rockClimbing: {
+      description:
+        "I love to boulder in my free time. Climbing both indoors and outdoors, I've found the sport gives me a way to push my limits physically and mentally. Bouldering has helped me get over my fear of heights and learn to stay calm under pressure. I love the sport most for how it emphasizes elegance and technique over brute force strength.",
+      image: "/rock-climbing-placeholder.jpg",
+    },
+    chess: {
+      description:
+        "Chess has been a long-time passion of mine. Starting in 9th grade, I played online during lunch break or after school. After a year of casual practice, I decided to take it to the next level and started competing. Every summer I attended two to five tournaments and had a reassuring amount of success. I loved the thought that went into each move, and wanted to keep rising the ranks. In the past four years, I've won first place at over five tournaments including the US National Championship, accumulating over $5000 in prizes. Currently, I'm rated 2150 on chess.com, in the top 0.01%. My dream is to one day get a Master title as I continue to play in tournaments.",
+      profileLink: "https://www.chess.com/member/YOUR-CHESS-USERNAME",
+      images: [
+        "/chess-1.jpg",
+        "/chess-2.jpg",
+      ],
+    },
+    photography: {
+      description:
+        "I enjoy photography as a way to capture the details that we overlook and the memories that we sometimes forget. It started off with borrowing my brothers Nikon camera and progressed to me getting my first camera at the end of senior year for my trip to Japan with friends. Looking back to the day the camera arrived, I'm grateful I captured every happy moment since.",
+      images: [
+        {
+          src: "/photos/photo-1.jpg",
+          alt: "Sample photograph 1",
+        },
+        {
+          src: "/photos/photo-2.jpg",
+          alt: "Sample photograph 2",
+        },
+        {
+          src: "/photos/photo-3.jpg",
+          alt: "Sample photograph 3",
+        },
+        {
+          src: "/photos/photo-4.jpg",
+          alt: "Sample photograph 4",
+        },
+      ],
+    },
   },
 };
 
