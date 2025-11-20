@@ -112,11 +112,29 @@ export const SITE_CONTENT: SiteContent = {
       ],
     },
     {
-      name: "Ember AI",
+      name: "Computer Architecture",
       summary:
-        "An iOS app that predicts vivid sunsets up to nine days ahead using machine learning and weather data. Reached 1,100+ active users across 35+ countries, helping tourists and photographers plan their perfect sunset shots.",
+        "In my senior year, I used binary logic and a simple breadboard to make a 7 digit binary counter that implemented a push button clock to signal time. The project took me over 3 months to design, create online, and manually wire.",
       images: [
         "/ember-ai-1.jpg",
+      ],
+    },
+    {
+      name: "Robot Kinematics",
+      summary:
+        "I spent the second half of my senior year working with four wheel mecanum robots. I created code that, given a path specifying start/end coordinates, and a line/arc traversal, calculated a robots path in real time and powered the robots wheels to follow the path. I also implemented PID to simultaneously calculate the robots direction and adjust it to stay on path amidst friction/obstacles.",
+      images: [
+        "/ember-ai-2.jpg",
+        "/ember-ai-3.jpg",
+      ],
+    },
+    {
+      name: "Compilers",
+      summary:
+        "In junior year, I spent four months creating a compiler. The project detailed creating a compiler that converted Pascal code to Mips 32 Assembly along with implementing features like regular expressions. In the making of my compiler, I learned about grammars, lexical and syntax analysis, stack implementation, and code generation.",
+      images: [
+        "/compiler-1.jpg",
+        "/compiler-2.jpg",
       ],
     },
   ],
