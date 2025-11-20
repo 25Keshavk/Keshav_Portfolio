@@ -123,6 +123,7 @@ export const SITE_CONTENT: SiteContent = {
       name: "Robot Kinematics",
       summary:
         "I spent the second half of my senior year working with four wheel mecanum robots. I created code that, given a path specifying start/end coordinates, and a line/arc traversal, calculated a robots path in real time and powered the robots wheels to follow the path. I also implemented PID to simultaneously calculate the robots direction and adjust it to stay on path amidst friction/obstacles.",
+      linkSource: "https://github.com/25Keshavk/Robot_Kinematics",
       images: [
         "/ember-ai-2.jpg",
         "/ember-ai-3.jpg",
