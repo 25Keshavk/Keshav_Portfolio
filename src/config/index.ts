@@ -4,7 +4,7 @@ export const SITE_CONFIG: SiteConfig = {
   title: "Keshav Kotamraju — Computer Science & Math",
   author: "Keshav Kotamraju",
   description:
-    "Computer Science and Mathematics student at the University of Pennsylvania (Class of 2029) with research experience in computational astrophysics, space science machine learning, and computational neuroscience.",
+    "Computer Science and Mathematics student at the University of Pennsylvania with research experience in computational astrophysics, space science machine learning, and computational neuroscience.",
   lang: "en",
   siteLogo: "/alejandro-small.jpg",
   navLinks: [
@@ -36,7 +36,7 @@ export const SITE_CONTENT: SiteContent = {
     name: "Keshav Kotamraju",
     specialty: "Computer Science & Mathematics @ University of Pennsylvania",
     summary:
-      "Computer Science and Mathematics student at the University of Pennsylvania (Class of 2029) with research experience in computational astrophysics, machine learning for space science, and computational neuroscience.",
+      "Computer Science and Mathematics student at the University of Pennsylvania with research experience in computational astrophysics, machine learning for space science, and computational neuroscience.",
     email: "kkotamraju7@gmail.com",
   },
   experience: [
@@ -114,7 +114,7 @@ export const SITE_CONTENT: SiteContent = {
     {
       name: "Computer Architecture",
       summary:
-        "In my senior year, I used binary logic and a simple breadboard to make a 7 digit binary counter that implemented a push button clock to signal time. The project took me over 3 months to design, create online, and manually wire.",
+        "I used binary logic and a simple breadboard to make a 7 digit binary counter that implemented a push button clock to signal time. The project took me over 3 months to design, create online, and manually wire.",
       images: [
         "/ember-ai-1.jpg",
       ],
@@ -122,7 +122,7 @@ export const SITE_CONTENT: SiteContent = {
     {
       name: "Robot Kinematics",
       summary:
-        "I spent the second half of my senior year working with four wheel mecanum robots. I created code that, given a path specifying start/end coordinates, and a line/arc traversal, calculated a robots path in real time and powered the robots wheels to follow the path. I also implemented PID to simultaneously calculate the robots direction and adjust it to stay on path amidst friction/obstacles.",
+        "I spent a few months with four wheel mecanum robots. I created code that, given a path specifying start/end coordinates, and a line/arc traversal, calculated a robots path in real time and powered the robots wheels to follow the path. I also implemented PID to simultaneously calculate the robots direction and adjust it to stay on path amidst friction/obstacles.",
       linkSource: "https://github.com/25Keshavk/Robot_Kinematics",
       images: [
         "/ember-ai-2.jpg",
@@ -132,7 +132,7 @@ export const SITE_CONTENT: SiteContent = {
     {
       name: "Compilers",
       summary:
-        "In junior year, I spent four months creating a compiler. The project detailed creating a compiler that converted Pascal code to Mips 32 Assembly along with implementing features like regular expressions. In the making of my compiler, I learned about grammars, lexical and syntax analysis, stack implementation, and code generation.",
+        "I created a compiler over the course of four months. The project detailed creating a compiler that converted Pascal code to Mips 32 Assembly along with implementing features like regular expressions. In the making of my compiler, I learned about grammars, lexical and syntax analysis, stack implementation, and code generation.",
       images: [
         "/compiler-1.jpg",
         "/compiler-2.jpg",
@@ -151,7 +151,7 @@ export const SITE_CONTENT: SiteContent = {
   },
   about: {
     description: `
-      I am a Computer Science and Mathematics student at the University of Pennsylvania (Class of 2029), interested in software engineering, machine learning, computational astrophysics, and neuroscience. I grew up in the Bay Area and spend my free time playing in chess tournaments, practicing my photography, and bouldering. My academic background spans statistics and probability, linear algebra, multivariate calculus, discrete mathematics, programming languages, and the mathematical foundations of computer science.
+      I am a Computer Science and Mathematics student at the University of Pennsylvania, interested in software engineering, machine learning, computational astrophysics, and neuroscience. I grew up in the Bay Area and spend my free time playing in chess tournaments, practicing my photography, and bouldering. My academic background spans statistics and probability, linear algebra, multivariate calculus, discrete mathematics, programming languages, and the mathematical foundations of computer science.
     `,
     images: [
       "/about-1.jpg",
