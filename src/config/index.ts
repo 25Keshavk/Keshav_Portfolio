@@ -141,7 +141,7 @@ export const SITE_CONTENT: SiteContent = {
   ],
   thinkCosmos: {
     description:
-      "I founded Think Cosmos in January 2022 with the goal of promoting astronomy among K–12 students. Over three years, the organization raised over $17,000, provided 40 telescopes to schools across 13 US states, developed comprehensive educational materials, and built a thriving astronomy community. In my senior year of High School, I rallied the 26 chapters of Think Cosmos in states like North Carolina, Texas, and Washington DC. Together, we sponsored astronomy organizations and funded museum trips for underprivileged children to inspire the next generation of scientists and explorers.",
+      "I founded Think Cosmos in January 2022 with the goal of promoting astronomy among K–12 students. Over three years, the organization raised provided 40 telescopes to schools across 13 US states, developed comprehensive educational materials, and built a thriving astronomy community. In my senior year of High School, I rallied the 26 chapters of Think Cosmos in states like North Carolina, Texas, and Washington DC. Together, we sponsored astronomy organizations and funded museum trips for underprivileged children to inspire the next generation of scientists and explorers.",
     images: [
       "/think-cosmos-1.jpg",
       "/think-cosmos-2.jpg",
