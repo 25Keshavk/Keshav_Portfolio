@@ -133,6 +133,7 @@ export const SITE_CONTENT: SiteContent = {
       name: "Compilers",
       summary:
         "I created a compiler over the course of four months. The project detailed creating a compiler that converted Pascal code to Mips 32 Assembly along with implementing features like regular expressions. In the making of my compiler, I learned about grammars, lexical and syntax analysis, stack implementation, and code generation.",
+      linkSource: "https://github.com/25Keshavk/Compilers",
       images: [
         "/compiler-1.jpg",
         "/compiler-2.jpg",
