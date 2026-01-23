@@ -170,7 +170,6 @@ export const SITE_CONTENT: SiteContent = {
     chess: {
       description:
         "Chess has been a long-time passion of mine. Starting in 9th grade, I played online during lunch break or after school. After a year of casual practice, I decided to take it to the next level and started competing. Every summer I attended two to five tournaments and had a reassuring amount of success. I loved the thought that went into each move, and wanted to keep rising the ranks. In the past four years, I've won first place at over five tournaments including the US National Championship, accumulating over $5000 in prizes. Currently, I'm rated 2150 on chess.com, in the top 0.01%. My dream is to one day get a Master title as I continue to play in tournaments.",
-      profileLink: "https://www.chess.com/member/YOUR-CHESS-USERNAME",
       images: [
         "/chess-1.jpg",
         "/chess-2.jpg",

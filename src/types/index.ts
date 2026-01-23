@@ -62,7 +62,6 @@ export interface ActivitiesContent {
   };
   chess: {
     description: string;
-    profileLink: string;
     images: string[];
   };
   photography: {
