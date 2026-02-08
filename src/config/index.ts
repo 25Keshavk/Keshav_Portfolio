@@ -8,10 +8,10 @@ export const SITE_CONFIG: SiteConfig = {
   lang: "en",
   siteLogo: "/alejandro-small.jpg",
   navLinks: [
+    { text: "About", href: "#about" },
     { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
     { text: "Think Cosmos", href: "#think-cosmos" },
-    { text: "About", href: "#about" },
     { text: "Rock Climbing", href: "#rock-climbing" },
     { text: "Chess", href: "#chess" },
     { text: "Photography", href: "#photography" },

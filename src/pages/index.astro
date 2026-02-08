@@ -14,23 +14,21 @@ import "../styles/global.css";
 ---
 
 <Layout>
-  <Hero {...SITE_CONTENT.hero} />
-  
   <div class="tab-content-wrapper">
-    <div id="experience-tab" class="tab-content active">
+    <div id="about-tab" class="tab-content active">
+      <About {...SITE_CONTENT.about} hero={SITE_CONTENT.hero} />
+    </div>
+
+    <div id="experience-tab" class="tab-content">
       <Experience experience={SITE_CONTENT.experience} />
     </div>
-    
+
     <div id="projects-tab" class="tab-content">
       <Projects projects={SITE_CONTENT.projects} />
     </div>
-    
+
     <div id="think-cosmos-tab" class="tab-content">
       <ThinkCosmos thinkCosmos={SITE_CONTENT.thinkCosmos} />
-    </div>
-    
-    <div id="about-tab" class="tab-content">
-      <About {...SITE_CONTENT.about} name={SITE_CONTENT.hero.name} />
     </div>
     
     <div id="rock-climbing-tab" class="tab-content">
