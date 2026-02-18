@@ -16,6 +16,14 @@ const { chess } = Astro.props;
     <p class="mb-6 text-base text-neutral">
       {chess.description}
     </p>
+    <a
+      href="https://www.chess.com/member/bigbrainedmattress/stats/rapid?days=0"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mb-6 inline-block rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-80"
+    >
+      Profile
+    </a>
     <div class="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
       {
         chess.images.map((image, index) => (
