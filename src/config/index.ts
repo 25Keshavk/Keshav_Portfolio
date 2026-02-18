@@ -36,7 +36,7 @@ export const SITE_CONTENT: SiteContent = {
     name: "Keshav Kotamraju",
     specialty: "",
     summary:
-      "Computer Science and Mathematics student at the University of Pennsylvania with research experience in computational astrophysics, object detection, and computational neuroscience.",
+      "Computer Science and Mathematics student at the University of Pennsylvania with research experience in computational astrophysics, machine learning, and computational neuroscience.",
     email: "kkotamraju7@gmail.com",
   },
   experience: [
@@ -59,7 +59,7 @@ export const SITE_CONTENT: SiteContent = {
       position: "Computational Astrophysics Research Intern",
       startDate: "June 2022",
       endDate: "August 2022",
-      summary: " improved hydrogen cloud identification by 58% using object detection models.",
+      summary: " improved hydrogen cloud identification by 58% using machine learning models.",
     },
     {
       company: "Think Cosmos",
