@@ -14,11 +14,11 @@ const { name, specialty, summary, email } = hero;
   >
     {name}
   </h1>
-  <p
+  {specialty && <p
     class="mb-3 font-serif text-xl leading-tight font-bold tracking-tight text-primary sm:text-2xl md:text-2xl"
   >
     {specialty}
-  </p>
+  </p>}
   <p class="mb-6 text-sm font-normal text-neutral md:text-base">
     {summary}
   </p>
