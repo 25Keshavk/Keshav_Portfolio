@@ -36,7 +36,7 @@ export const SITE_CONTENT: SiteContent = {
     name: "Keshav Kotamraju",
     specialty: "",
     summary:
-      "Computer Science and Mathematics student at the University of Pennsylvania with research experience in computational astrophysics, machine learning for space science, and computational neuroscience.",
+      "Computer Science and Mathematics student at the University of Pennsylvania with research experience in computational astrophysics, object detection, and computational neuroscience.",
     email: "kkotamraju7@gmail.com",
   },
   experience: [
